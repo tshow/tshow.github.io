@@ -50,23 +50,6 @@
                     
                     autoUpdate();
                    
-                   function getWeather() { 
-                   var myMapType = new google.maps.ImageMapType({
-                      getTileUrl: function(coord, zoom) {
-                        return "https://tile.openweathermap.org/map/precipitation_new/" + 
-                               zoom + "/" + coord.x + "/" + coord.y + ".png?appid=050229630435446e232f93ea8c95e258";
-                      },
-                      tileSize: new google.maps.Size(256, 256),
-                      maxZoom: 9,
-                      minZoom: 0,
-                      name: 'mymaptype'
-                    });
-                
-                    map.overlayMapTypes.insertAt(0, myMapType);      
-                    
-                    }
-                    getWeather;
-                    setInterval(getWeather,10000)
                    var activity_coordinates = [{lat: 30.18679, lng: -97.90414},
 {lat: 30.18676, lng: -97.90435},
 {lat: 30.18674, lng: -97.90456},
